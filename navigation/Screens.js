@@ -91,15 +91,21 @@ const ArticlesStack = createStackNavigator({
 
 const ProfileStack = createStackNavigator(
   {
+    // Profile: {
+    //   screen: Profile,
+    //   navigationOptions: ({ navigation }) => ({
+    //     header: (
+    //       <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation} />
+    //     ),
+    //     // headerTransparent: true
+    //   })
+    // }
     Profile: {
       screen: Profile,
       navigationOptions: ({ navigation }) => ({
-        header: (
-          <Header white transparent title="Profile" iconColor={'#FFF'} navigation={navigation} />
-        ),
-        headerTransparent: true
+        header: <Header search title="" navigation={navigation} />
       })
-    }
+    },
   },
   {
     cardStyle: { backgroundColor: "#FFFFFF" },
@@ -112,7 +118,7 @@ const HomeStack = createStackNavigator(
     Home: {
       screen: Home,
       navigationOptions: ({ navigation }) => ({
-        header: <Header search options title="Home" navigation={navigation} />
+        header: <Header search options title="" navigation={navigation} />
       })
     },
     Pro: {
@@ -135,11 +141,19 @@ const HomeStack = createStackNavigator(
 // divideru se baga ca si cum ar fi un ecrna dar nu-i nimic duh
 const AppStack = createDrawerNavigator(
   {
-    Onboarding: {
-      screen: Onboarding,
-      navigationOptions: {
-        drawerLabel: () => {}
-      }
+    // Onboarding: {
+    //   screen: Onboarding,
+    //   navigationOptions: {
+    //     drawerLabel: () => {}
+    //   }
+    // },
+    Account: {
+      screen: Register,
+      navigationOptions: navOpt => ({
+        drawerLabel: ({ focused }) => (
+          <DrawerItem focused={focused} screen="Register" title="Cerrar Sesión" />
+        )
+      })
     },
     Home: {
       screen: HomeStack,
@@ -154,14 +168,6 @@ const AppStack = createDrawerNavigator(
       navigationOptions: navOpt => ({
         drawerLabel: ({ focused }) => (
           <DrawerItem focused={focused} screen="Profile" title="Profile" />
-        )
-      })
-    },
-    Account: {
-      screen: Register,
-      navigationOptions: navOpt => ({
-        drawerLabel: ({ focused }) => (
-          <DrawerItem focused={focused} screen="Register" title="Account" />
         )
       })
     },

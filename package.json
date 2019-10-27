@@ -1,7 +1,7 @@
 {
-  "name": "argon-react-native",
+  "name": "concierge",
   "version": "1.2.0",
-  "description": "Argon React Native, based on Argon Design System. Coded by Creative Tim",
+  "description": "concierge is a great app",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -23,29 +23,13 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-gesture-handler": "^1.3.0",
     "react-native-modal-dropdown": "^0.6.2",
-    "react-navigation": "^3.11.0"
+    "react-navigation": "^3.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
   },
-  "keywords": [
-    "argon react native",
-    "argon design system",
-    "argon app react native",
-    "argon iOS",
-    "react native iOS",
-    "creative tim",
-    "argon Android",
-    "react native ui kit",
-    "react native expo",
-    "freebie",
-    "react native argon design",
-    "react native galio",
-    "galio argon free",
-    "galio react native free app",
-    "argon expo react native",
-    "react native ui template"
-  ],
   "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
   "license": "MIT",
   "bugs": {

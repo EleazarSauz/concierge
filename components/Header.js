@@ -12,7 +12,7 @@ const { height, width } = Dimensions.get('window');
 const iPhoneX = () => Platform.OS === 'ios' && (height === 812 || width === 812 || height === 896 || width === 896);
 
 const BellButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => console.log('bell')}>
     <Icon
       family="ArgonExtra"
       size={16}
@@ -24,18 +24,18 @@ const BellButton = ({isWhite, style, navigation}) => (
 );
 
 const BasketButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Profile')}>
     <Icon
       family="ArgonExtra"
       size={16}
-      name="basket"
+      name="hat-3"
       color={argonTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
   </TouchableOpacity>
 );
 
 const SearchButton = ({isWhite, style, navigation}) => (
-  <TouchableOpacity style={[styles.button, style]} onPress={() => navigation.navigate('Pro')}>
+  <TouchableOpacity style={[styles.button, style]} onPress={() => console.log('search')}>
     <Icon
       size={16}
       family="Galio"
@@ -115,7 +115,7 @@ class Header extends React.Component {
         style={styles.search}
         placeholder="What are you looking for?"
         placeholderTextColor={'#8898AA'}
-        onFocus={() => navigation.navigate('Pro')}
+        onFocus={() => console.log('search')}
         iconContent={<Icon size={16} color={theme.COLORS.MUTED} name="search-zoom-in" family="ArgonExtra" />}
       />
     );
@@ -125,16 +125,31 @@ class Header extends React.Component {
 
     return (
       <Block row style={styles.options}>
-        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => console.log('Disponible')}>
           <Block row middle>
             <Icon name="diamond" family="ArgonExtra" style={{ paddingRight: 8 }} color={argonTheme.COLORS.ICON} />
-            <Text size={16} style={styles.tabTitle}>{optionLeft || 'Beauty'}</Text>
+            <Text size={16} style={styles.tabTitle}>{optionLeft || 'Saldo'}</Text>
+          </Block>
+          <Block row middle>
+            <Text size={16} style={styles.tabTitle2}>$ 10,000.00</Text>
           </Block>
         </Button>
-        <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+        <Button shadowless style={[styles.tab, styles.divider]} onPress={() => console.log('Saldo')}>
+          <Block row middle>
+            <Icon name="diamond" family="ArgonExtra" style={{ paddingRight: 8 }} color={argonTheme.COLORS.ICON} />
+            <Text size={16} style={styles.tabTitle}>{optionLeft || 'Disponible'}</Text>
+          </Block>
+          <Block row middle>
+            <Text size={16} style={styles.tabTitle2}>$ 1,000.00</Text>
+          </Block>
+        </Button>
+        <Button shadowless style={styles.tab} onPress={() => console.log('Total')}>
           <Block row middle>
             <Icon size={16} name="bag-17" family="ArgonExtra" style={{ paddingRight: 8 }} color={argonTheme.COLORS.ICON}/>
-            <Text size={16} style={styles.tabTitle}>{optionRight || 'Fashion'}</Text>
+            <Text size={16} style={styles.tabTitle}>{optionRight || 'Total'}</Text>
+          </Block>
+          <Block row middle>
+            <Text size={16} style={styles.tabTitle2}>$ 11,000.00</Text>
           </Block>
         </Button>
       </Block>
@@ -158,7 +173,7 @@ class Header extends React.Component {
     if (search || tabs || options) {
       return (
         <Block center>
-          {search ? this.renderSearch() : null}
+          {/* {search ? this.renderSearch() : null} */}
           {options ? this.renderOptions() : null}
           {tabs ? this.renderTabs() : null}
         </Block>
@@ -266,10 +281,16 @@ const styles = StyleSheet.create({
     width: width * 0.35,
     borderRadius: 0,
     borderWidth: 0,
-    height: 24,
+    height: 54,
     elevation: 0,
   },
   tabTitle: {
+    lineHeight: 19,
+    fontWeight: '400',
+    color: argonTheme.COLORS.HEADER
+  },
+  tabTitle2: {
+    paddingTop: 10,
     lineHeight: 19,
     fontWeight: '400',
     color: argonTheme.COLORS.HEADER

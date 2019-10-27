@@ -4,7 +4,7 @@ import {
   ScrollView,
   StyleSheet,
   Dimensions,
-  Image
+  Image, Text
 } from "react-native";
 import { Block, theme } from "galio-framework";
 
@@ -15,7 +15,7 @@ const { width } = Dimensions.get("screen");
 const Drawer = props => (
   <Block style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
     <Block flex={0.05} style={styles.header}>
-      <Image styles={styles.logo} source={Images.Logo} />
+      <Text style={{fontSize: 24}}>CONCIERGE</Text>
     </Block>
     <Block flex>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>

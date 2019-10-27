@@ -1,9 +1,9 @@
 export default [
   {
     id: 1,
-    title: 'GYM',
-    image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg',
-    cta: 'GYM', 
+    Nombre: 'Juan',
+    image: 'https://media.istockphoto.com/photos/portrait-of-a-beautifull-smiling-man-picture-id499907722?k=6&m=499907722&s=612x612&w=0&h=MYOvvCDGwVuKDQKPhkdQ_-hCqNST3AsMJv2CnO0AhNg=',
+    cta: 'Juan', 
     ahorro: false,
     key:'1',
     name:'¿Sabías qué?',
@@ -14,8 +14,8 @@ export default [
   },
   {
     id: 2,
-    title: 'Viaje',
-    image: 'https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg',
+    Nombre: 'Pepe',
+    image: 'https://themify.me/demo/themes/pinshop/files/2012/12/man-in-suit2.jpg',
     cta: 'Viaje',
     ahorro: true,
     key:'2',
@@ -27,7 +27,7 @@ export default [
   },
   {
     id: 3,
-    title: 'Belleza',
+    Nombre: 'Ana',
     image: 'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
     cta: 'Belleza',
     ahorro: false,
@@ -40,8 +40,8 @@ export default [
   },
   {
     id: 4,
-    title: 'Fiesta',
-    image: 'https://images.pexels.com/photos/1449794/pexels-photo-1449794.jpeg',
+    Nombre: 'Lucas',
+    image: 'https://img.freepik.com/free-photo/smiley-man-liking-idea-with-copy-space_23-2148221727.jpg?size=626&ext=jpg',
     cta: 'Fiesta',
     ahorro: false,
     key:'4',
@@ -51,17 +51,4 @@ export default [
     value: 999,
     total: 1000
   },
-  // {
-  //   id: 5,
-  //   title: 'concierge',
-  //   image: 'https://images.unsplash.com/photo-1482686115713-0fbcaced6e28?fit=crop&w=1947&q=80',
-  //   cta: 'Tacos', 
-  //   ahorro: true,
-  //   key:'5',
-  //   name:'¿Sabías qué?',
-  //   text: 'Un vaso de plástico tarda hasta 1,000 años en degradarse',
-  //   percentage: '60%',
-  //   value: 1,
-  //   total: 20
-  // },
 ];

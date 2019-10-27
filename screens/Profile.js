@@ -38,7 +38,7 @@ class Profile extends React.Component {
                     style={styles.avatar}
                   />
                 </Block>
-                <Block style={styles.info}>
+                {/* <Block style={styles.info}>
                   <Block
                     middle
                     row
@@ -53,6 +53,7 @@ class Profile extends React.Component {
                     </Button>
                     <Button
                       small
+                      onPress={() => navigation.navigate("Home")}
                       style={{ backgroundColor: argonTheme.COLORS.DEFAULT }}
                     >
                       MESSAGE
@@ -93,20 +94,20 @@ class Profile extends React.Component {
                       <Text size={12}>Comments</Text>
                     </Block>
                   </Block>
-                </Block>
+                </Block> */}
                 <Block flex>
                   <Block middle style={styles.nameInfo}>
                     <Text bold size={28} color="#32325D">
-                      Jessica Jones, 27
+                      Óscar Carpizo, 24
                     </Text>
                     <Text size={16} color="#32325D" style={{ marginTop: 10 }}>
-                      San Francisco, USA
+                      Ciudad de México, Mex
                     </Text>
                   </Block>
                   <Block middle style={{ marginTop: 30, marginBottom: 16 }}>
                     <Block style={styles.divider} />
                   </Block>
-                  <Block middle>
+                  {/* <Block middle>
                     <Text
                       size={16}
                       color="#525F7F"
@@ -125,8 +126,8 @@ class Profile extends React.Component {
                     >
                       Show more
                     </Button>
-                  </Block>
-                  <Block
+                  </Block> */}
+                  {/* <Block
                     row
                     style={{ paddingVertical: 14, alignItems: "baseline" }}
                   >
@@ -157,9 +158,9 @@ class Profile extends React.Component {
                         />
                       ))}
                     </Block>
-                  </Block>
+                  </Block> */}
                 </Block>
-              </Block>
+              </Block> 
             </ScrollView>
           </ImageBackground>
         </Block>
